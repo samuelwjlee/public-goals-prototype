@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import './index.css'
-import PageNotFound from './PageNotFound'
-import PublicGoals from './PublicGoals'
-import UserGoals from './UserGoals'
-import Goal from './Goal'
+import PageNotFound from './components/PageNotFound'
+import PublicGoals from './components/PublicGoals'
+import UserGoals from './components/UserGoals'
+import Goal from './components/Goal'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
