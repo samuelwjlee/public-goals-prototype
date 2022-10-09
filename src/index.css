@@ -26,6 +26,10 @@ code {
   max-width: 400px;
   box-sizing: border-box;
   border: 3px solid black;
+  cursor: pointer;
+}
+.GoalCard:hover {
+  box-shadow: 3px 3px gray;
 }
 
 .GoalCardFooter {

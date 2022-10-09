@@ -13,5 +13,5 @@ export function useFetch(url: string) {
     })()
   }, [url])
 
-  return [data, isLoading] as [null | any[], boolean]
+  return [data, isLoading] as [null | any, boolean]
 }
