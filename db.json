@@ -35,5 +35,13 @@
       "userId": "jeffbezos",
       "description": "I'd like to conquer the world by taking control of the internet and the stratosphere while I'm at it"
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "goalId": 1,
+      "userId": "stevejobs",
+      "text": "That's a great goal. Make sure you are hydrated throughout the run. I'm cheering you on!"
+    }
   ]
 }

@@ -5,3 +5,10 @@ export type GoalData = {
   userId: string
   description: string
 }
+
+export type CommentData = {
+  id: number
+  goalId: number
+  userId: string
+  text: string
+}
