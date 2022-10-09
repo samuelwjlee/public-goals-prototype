@@ -5,35 +5,40 @@
       "completed": false,
       "expiration": "1 month",
       "userId": "samuelwjlee",
-      "description": "Finish Huntington Beach half-marathon (13.1 miles) in under two hours!"
+      "description": "Finish Huntington Beach half-marathon (13.1 miles) in under two hours!",
+      "commentCount": 3
     },
     {
       "id": 2,
       "completed": false,
       "expiration": "3 years",
       "userId": "stevejobs",
-      "description": "The ultimate goal is to power all Apple facilities entirely by renewable energy"
+      "description": "The ultimate goal is to power all Apple facilities entirely by renewable energy",
+      "commentCount": 1
     },
     {
       "id": 3,
       "completed": false,
       "expiration": "2 weeks",
       "userId": "markzukerburg",
-      "description": "By the end of the year, I want to have visited all 50 states and met people in each one."
+      "description": "By the end of the year, I want to have visited all 50 states and met people in each one.",
+      "commentCount": 1
     },
     {
       "id": 4,
       "completed": false,
       "expiration": "5 days",
       "userId": "elonmusk",
-      "description": "Accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible"
+      "description": "Accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible",
+      "commentCount": 1
     },
     {
       "id": 5,
       "completed": true,
       "expiration": "1232",
       "userId": "jeffbezos",
-      "description": "I'd like to conquer the world by taking control of the internet and the stratosphere while I'm at it"
+      "description": "I'd like to conquer the world by taking control of the internet and the stratosphere while I'm at it",
+      "commentCount": 1
     }
   ],
   "comments": [
@@ -42,6 +47,42 @@
       "goalId": 1,
       "userId": "stevejobs",
       "text": "That's a great goal. Make sure you are hydrated throughout the run. I'm cheering you on!"
+    },
+    {
+      "id": 2,
+      "goalId": 1,
+      "userId": "elonmusk",
+      "text": "What kind of training routine are you on?"
+    },
+    {
+      "id": 3,
+      "goalId": 1,
+      "userId": "jeffbezos",
+      "text": "Would you like to run with me?"
+    },
+    {
+      "id": 4,
+      "goalId": 2,
+      "userId": "elonmusk",
+      "text": "We could always ditch this planet and become a multi-planetary species"
+    },
+    {
+      "id": 5,
+      "goalId": 3,
+      "userId": "jeffbezos",
+      "text": "How about a trip to the stratosphere with me Mark?"
+    },
+    {
+      "id": 6,
+      "goalId": 4,
+      "userId": "markzukerburg",
+      "text": "Elon, I like your goal here. What do you think about Virtual Reality? Transport is not needed in that space"
+    },
+    {
+      "id": 7,
+      "goalId": 5,
+      "userId": "elonmusk",
+      "text": "What kind of rockets are you using? Have you tried SpaceX's Falcon Heavy?"
     }
   ]
 }

@@ -4,6 +4,7 @@ export type GoalData = {
   expiration: string
   userId: string
   description: string
+  commentCount: number
 }
 
 export type CommentData = {

@@ -9,14 +9,17 @@ export default function PublicGoals() {
   const [goals, isLoading] = useFetch(FETCH_GOALS_URL)
   return (
     <Loader isLoading={isLoading}>
-      <div className="PublicGoals">
+      <div className="public-goals">
         <h1>Public Goals</h1>
         {goals?.map((goal: GoalData) => (
-          <div className="GoalCard" onClick={() => navigate(`/${goal?.id}`)}>
+          <div className="goal-card" onClick={() => navigate(`/${goal?.id}`)}>
+            <p className="goal-card-status">
+              {goal?.completed ? '✅ DONE' : '🔴 LIVE'}
+            </p>
             <h3>{goal?.description}</h3>
-            <div className="GoalCardFooter">
-              <p>{goal?.completed ? '✅ DONE' : '🔴 LIVE'}</p>
-              <p>Posted by {goal?.userId}</p>
+            <div className="goal-card-footer">
+              {goal?.commentCount && <p>{goal?.commentCount} comments</p>}
+              <p className="goal-card-author">By {goal?.userId}</p>
             </div>
           </div>
         ))}

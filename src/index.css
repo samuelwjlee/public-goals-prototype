@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.PublicGoals {
+.public-goals {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,7 @@ code {
   padding: 20px;
 }
 
-.GoalCard {
+.goal-card {
   padding: 20px 30px;
   margin: 25px 0;
   max-width: 400px;
@@ -28,13 +28,47 @@ code {
   border: 3px solid black;
   cursor: pointer;
 }
-.GoalCard:hover {
+.goal-card:hover {
   box-shadow: 3px 3px gray;
 }
 
-.GoalCardFooter {
+.goal-card-status {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.goal-card-footer {
   font-size: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.goal-card-author {
+  margin-left: auto;
+}
+
+.goal-page {
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.goal-page-content {
+  margin: 35px 0;
+}
+.goal-page-content > p {
+  font-size: 14px;
+}
+
+.goal-page-comments-section {
+  margin: 30px 0;
+}
+.goal-page-comment {
+  margin: 0 0 30px 0;
+}
+.comment-author {
+  font-size: 14px;
+  font-weight: bold;
 }
