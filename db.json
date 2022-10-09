@@ -2,15 +2,38 @@
   "goals": [
     {
       "id": 1,
-      "title": "Run a half marathon within 2 hours",
+      "completed": false,
+      "expiration": "1 month",
       "userId": "samuelwjlee",
-      "description": "I will be runing a half marathon on Nov 19th 2022. I previously ran one before in San Francisco a few years ago and I clocked in at 2hrs and 20 minutes. This time, I want to complete it under 2 hours."
+      "description": "Finish Huntington Beach half-marathon (13.1 miles) in under two hours!"
     },
     {
       "id": 2,
-      "title": "Run a half marathon within 2 hours",
-      "userId": "samuelwjlee",
-      "description": "I will be runing a half marathon on Nov 19th 2022. I previously ran one before in San Francisco a few years ago and I clocked in at 2hrs and 20 minutes. This time, I want to complete it under 2 hours."
+      "completed": false,
+      "expiration": "3 years",
+      "userId": "stevejobs",
+      "description": "The ultimate goal is to power all Apple facilities entirely by renewable energy"
+    },
+    {
+      "id": 3,
+      "completed": false,
+      "expiration": "2 weeks",
+      "userId": "markzukerburg",
+      "description": "By the end of the year, I want to have visited all 50 states and met people in each one."
+    },
+    {
+      "id": 4,
+      "completed": false,
+      "expiration": "5 days",
+      "userId": "elonmusk",
+      "description": "Accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible"
+    },
+    {
+      "id": 5,
+      "completed": true,
+      "expiration": "1232",
+      "userId": "jeffbezos",
+      "description": "I'd like to conquer the world by taking control of the internet and the stratosphere while I'm at it"
     }
   ]
 }

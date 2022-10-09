@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.PublicGoals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.GoalCard {
+  padding: 20px 30px;
+  margin: 25px 0;
+  max-width: 400px;
+  box-sizing: border-box;
+  border: 3px solid black;
+}
+
+.GoalCardFooter {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
