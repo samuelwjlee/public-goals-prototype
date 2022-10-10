@@ -21,7 +21,7 @@
       "completed": false,
       "when": "01/01/2030",
       "userId": "markzukerburg",
-      "what": "visit all 50 states and met people in each one",
+      "what": "visit all 50 states and meet people in each one",
       "commentCount": 1
     },
     {
@@ -39,6 +39,14 @@
       "userId": "jeffbezos",
       "what": "conquer the world by taking control of the internet and the stratosphere while I'm at it",
       "commentCount": 1
+    },
+    {
+      "id": 6,
+      "completed": false,
+      "when": "11/01/2022",
+      "userId": "samuelwjlee",
+      "what": "reduce monthly food budget to sub $500",
+      "commentCount": 0
     }
   ],
   "comments": [
