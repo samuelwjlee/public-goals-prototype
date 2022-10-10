@@ -1,3 +1,3 @@
 # public-goals-prototype
 
-Take goals public. Help others complete them. Get inspired.
+Take goals public. Help complete them. Get inspired.
