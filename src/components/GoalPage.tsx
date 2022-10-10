@@ -15,8 +15,11 @@ export default function GoalPage() {
       <div className="goal-page">
         <a href="/">👈🏼 Back</a>
         <div className="goal-page-content">
-          <h1>{goal?.description}</h1>
-          <p>By {goal?.userId}</p>
+          <div className="goal-description">
+            <span className="goal-card-author">{goal?.userId}'s</span> goal is
+            to <span className="emphasized-goal-attr">{goal?.what}</span> no
+            later than {goal?.when}.
+          </div>
         </div>
         <div className="goal-page-comments-section">
           {comments?.map((comment: CommentData) => (

@@ -3,41 +3,41 @@
     {
       "id": 1,
       "completed": false,
-      "expiration": "1 month",
+      "when": "11/19/2022",
       "userId": "samuelwjlee",
-      "description": "Finish Huntington Beach half-marathon (13.1 miles) in under two hours!",
+      "what": "finish Huntington Beach half-marathon (13.1 miles) in under two hours!",
       "commentCount": 3
     },
     {
       "id": 2,
       "completed": false,
-      "expiration": "3 years",
+      "when": "12/01/2025",
       "userId": "stevejobs",
-      "description": "The ultimate goal is to power all Apple facilities entirely by renewable energy",
+      "what": "power all Apple facilities entirely by renewable energy",
       "commentCount": 1
     },
     {
       "id": 3,
       "completed": false,
-      "expiration": "2 weeks",
+      "when": "01/01/2030",
       "userId": "markzukerburg",
-      "description": "By the end of the year, I want to have visited all 50 states and met people in each one.",
+      "what": "visit all 50 states and met people in each one",
       "commentCount": 1
     },
     {
       "id": 4,
       "completed": false,
-      "expiration": "5 days",
+      "when": "03/13/2030",
       "userId": "elonmusk",
-      "description": "Accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible",
+      "what": "accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible",
       "commentCount": 1
     },
     {
       "id": 5,
       "completed": true,
-      "expiration": "1232",
+      "when": "07/04/2023",
       "userId": "jeffbezos",
-      "description": "I'd like to conquer the world by taking control of the internet and the stratosphere while I'm at it",
+      "what": "conquer the world by taking control of the internet and the stratosphere while I'm at it",
       "commentCount": 1
     }
   ],

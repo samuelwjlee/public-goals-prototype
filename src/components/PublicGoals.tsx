@@ -13,13 +13,19 @@ export default function PublicGoals() {
         <h1>Public Goals</h1>
         {goals?.map((goal: GoalData) => (
           <div className="goal-card" onClick={() => navigate(`/${goal?.id}`)}>
-            <p className="goal-card-status">
-              {goal?.completed ? '✅ DONE' : '🔴 LIVE'}
-            </p>
-            <h3>{goal?.description}</h3>
+            <div className="goal-description">
+              <span className="goal-card-author">{goal?.userId}'s</span>{' '}
+              bite-sized goal is to{' '}
+              <span className="emphasized-goal-attr">{goal?.what}</span> no
+              later than {goal?.when}.
+            </div>
             <div className="goal-card-footer">
-              {goal?.commentCount && <p>{goal?.commentCount} comments</p>}
-              <p className="goal-card-author">By {goal?.userId}</p>
+              {goal?.commentCount && (
+                <>
+                  {goal?.commentCount} comment
+                  {goal?.commentCount > 1 ? 's' : ''}
+                </>
+              )}
             </div>
           </div>
         ))}
