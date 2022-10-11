@@ -3,6 +3,7 @@ import { useFetch } from '../hooks/api-hook'
 import { GoalData } from '../constants/types'
 import GoalDescription from './GoalDescription'
 import Loader from './Loader'
+import { Link } from 'react-router-dom'
 
 export default function PublicGoals() {
   const [goals, isLoading] = useFetch(FETCH_GOALS_URL)
@@ -16,10 +17,10 @@ export default function PublicGoals() {
               <GoalDescription goalData={goal} />
               <div className="goal-card-footer">
                 {!!goal?.commentCount && (
-                  <>
+                  <Link to={`/${goal?.id}`} className="comment-link">
                     {goal?.commentCount} comment
                     {goal?.commentCount > 1 ? 's' : ''}
-                  </>
+                  </Link>
                 )}
               </div>
             </div>

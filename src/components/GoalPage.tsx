@@ -5,6 +5,7 @@ import { useFetch } from '../hooks/api-hook'
 import GoalDescription from './GoalDescription'
 import UserBubble from './UserBubble'
 import Loader from './Loader'
+import BackLink from './BackLink'
 
 export default function GoalPage() {
   const goalId = useParams().id
@@ -15,7 +16,7 @@ export default function GoalPage() {
   return (
     <Loader isLoading={isGoalLoading || isCommentsLoading}>
       <div className="goal-page">
-        <a href="/">👈🏼 Back</a>
+        <BackLink destinationText="home" destinationUrl="/" />
         {goal && (
           <div className="goal-page-content">
             <GoalDescription goalData={goal} />
