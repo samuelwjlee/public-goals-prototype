@@ -1,4 +1,4 @@
-import { GoalData } from '../constants/types'
+import { GoalData } from '../api-client'
 import UserBubble from './UserBubble'
 
 export default function GoalDescription({ goalData }: { goalData: GoalData }) {
