@@ -1,30 +1,26 @@
 import { useParams } from 'react-router-dom'
-import { CommentData } from '../constants/types'
-import { FETCH_GOALS_URL, FETCH_COMMENTS_URL } from '../constants/urls'
-import { useFetch } from '../hooks/api-hook'
+import { useFetchComments, useFetchGoal } from '../hooks/api-client'
 import GoalDescription from './GoalDescription'
 import UserBubble from './UserBubble'
 import Loader from './Loader'
 import BackLink from './BackLink'
 
 export default function GoalPage() {
-  const goalId = useParams().id
-  const [goal, isGoalLoading] = useFetch(`${FETCH_GOALS_URL}/${goalId}`)
-  const [comments, isCommentsLoading] = useFetch(
-    `${FETCH_COMMENTS_URL}?goalId=${goalId}`
-  )
+  const goalId = useParams().id as string
+  const { goalData, isGoalLoading } = useFetchGoal(goalId)
+  const { commentData, isCommentLoading } = useFetchComments(goalId)
   return (
-    <Loader isLoading={isGoalLoading || isCommentsLoading}>
+    <Loader isLoading={isGoalLoading || isCommentLoading}>
       <div className="goal-page">
         <BackLink destinationText="home" destinationUrl="/" />
-        {goal && (
+        {goalData && (
           <div className="goal-page-content">
-            <GoalDescription goalData={goal} />
+            <GoalDescription goalData={goalData} />
           </div>
         )}
-        {comments && (
+        {commentData && (
           <div className="goal-page-comments-section">
-            {comments?.map((comment: CommentData) => (
+            {commentData?.map((comment) => (
               <div className="goal-page-comment" key={comment.id}>
                 <UserBubble userId={comment.userId} />
                 <p>{comment.text}</p>

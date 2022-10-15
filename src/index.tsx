@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Routes>
         <Route path="/" element={<PublicGoals />} />
         <Route path=":id" element={<GoalPage />} />
-        <Route path="/user/:username" element={<UserGoals />} />
+        <Route path="/user/:userId" element={<UserGoals />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/404" element={<PageNotFound />} />
       </Routes>
