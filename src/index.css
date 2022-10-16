@@ -57,6 +57,8 @@ button {
   margin: 0 auto;
   max-width: var(--pageMaxWidth);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .goal-page-content {

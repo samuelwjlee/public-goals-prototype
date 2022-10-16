@@ -7,7 +7,7 @@ import BackLink from './BackLink'
 import { useState } from 'react'
 
 export default function GoalPage() {
-  const goalId = useParams().id ?? ''
+  const goalId = useParams().goalId ?? ''
   const goal = useFetchGoal(goalId)
   const comments = useFetchComments(goalId)
   const [userComment, setUserComment] = useState('')
@@ -15,8 +15,8 @@ export default function GoalPage() {
 
   return (
     <div className="goal-page">
+      <BackLink destinationText="home" destinationUrl="/" />
       <Loader isLoading={goal.isLoading}>
-        <BackLink destinationText="home" destinationUrl="/" />
         {goal.data && (
           <div className="goal-page-content">
             <GoalDescription goalData={goal.data} />
