@@ -10,13 +10,6 @@ button {
   cursor: pointer;
 }
 
-.header {
-  text-align: center;
-  padding: 30px 0;
-  margin: 0 0 20px 0;
-  background-color: black;
-  color: white;
-}
 .public-goals {
   display: flex;
   justify-content: center;
@@ -113,6 +106,7 @@ button {
 }
 .comment-input {
   width: 100%;
+  font-size: 14px;
   height: auto;
   border: none;
   outline: none;
@@ -123,23 +117,18 @@ button {
   font-size: 14px;
 }
 .comment-button {
-  font-weight: bold;
+  border: none;
   background: none;
+  font-weight: bold;
   margin-top: 20px;
   margin-left: auto;
   padding: 10px;
-  border-radius: 14px;
-  border-color: black;
-}
-.comment-button:hover {
-  color: white;
-  background-color: black;
 }
 
 .user-goal-content {
   padding: 0 20px;
   margin: 30px auto;
-  max-width: 700px;
+  max-width: 500px;
 }
 .user-goal {
   margin-top: 20px;

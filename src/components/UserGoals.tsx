@@ -9,7 +9,6 @@ export default function UserGoals() {
   const userGoals = useFetchUserGoals(userId as string)
   return (
     <Loader isLoading={userGoals.isLoading}>
-      <h1 className="header">👨🏻‍💻 {userId}'s goals</h1>
       <div className="user-goal-content">
         <BackLink destinationText="home" destinationUrl="/" />
         {userGoals.data?.map((goal) => (

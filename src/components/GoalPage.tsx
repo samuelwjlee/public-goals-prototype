@@ -4,14 +4,14 @@ import GoalDescription from './GoalDescription'
 import UserBubble from './UserBubble'
 import Loader from './Loader'
 import BackLink from './BackLink'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 
 export default function GoalPage() {
-  const goalId = useParams().id as string
+  const goalId = useParams().id ?? ''
   const goal = useFetchGoal(goalId)
-  const newUserComment = useRef('')
   const comments = useFetchComments(goalId)
-  const [isInputFilled, setIsInputFilled] = useState(false)
+  const [userComment, setUserComment] = useState('')
+  const [isInputFocused, setIsInputFocused] = useState(false)
 
   return (
     <div className="goal-page">
@@ -26,32 +26,37 @@ export default function GoalPage() {
       <div className="comment-form">
         <div
           onInput={(e) => {
-            newUserComment.current = e.currentTarget.textContent ?? ''
+            setUserComment(e.currentTarget.textContent ?? '')
           }}
           onBlur={() => {
-            if (!newUserComment.current) {
-              setIsInputFilled(false)
+            if (!userComment) {
+              setIsInputFocused(false)
             }
           }}
           onFocus={() => {
-            if (!isInputFilled) {
-              setIsInputFilled(true)
+            if (!isInputFocused) {
+              setIsInputFocused(true)
             }
           }}
           className={
-            isInputFilled ? 'comment-input' : 'comment-input-placeholder'
+            isInputFocused ? 'comment-input' : 'comment-input-placeholder'
           }
           contentEditable
         >
-          {!isInputFilled && 'Add a comment'}
+          {!isInputFocused && 'Add a comment'}
         </div>
-        {isInputFilled && (
+        {isInputFocused && userComment && (
           <button
             className="comment-button"
             onClick={() => {
-              postUserComment(newUserComment.current, goalId, 'samuelwjlee')
-              setIsInputFilled(false)
-              newUserComment.current = ''
+              setUserComment('')
+              setIsInputFocused(false)
+              postUserComment(
+                userComment,
+                goalId,
+                goal.data?.userId ?? '',
+                comments.refetch
+              )
             }}
           >
             Comment

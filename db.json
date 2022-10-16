@@ -55,49 +55,119 @@
       "goalId": "1",
       "userId": "stevejobs",
       "text": "That's a great goal. Make sure you are hydrated throughout the run. I'm cheering you on!",
-      "createdAt": "Oct 10, 2022"
+      "createdAt": "2022-10-11T01:02:53.084Z"
     },
     {
       "id": "2",
       "goalId": "1",
       "userId": "elonmusk",
       "text": "What kind of training routine are you on?",
-      "createdAt": "Oct 10, 2022"
+      "createdAt": "2022-10-11T01:02:53.084Z"
     },
     {
       "id": "3",
       "goalId": "1",
       "userId": "jeffbezos",
       "text": "Would you like to run with me?",
-      "createdAt": "Oct 10, 2022"
+      "createdAt": "2022-10-11T01:02:53.084Z"
     },
     {
       "id": "4",
       "goalId": "2",
       "userId": "elonmusk",
       "text": "We could always ditch this planet and become a multi-planetary species",
-      "createdAt": "Oct 10, 2022"
+      "createdAt": "2022-10-11T01:02:53.084Z"
     },
     {
       "id": "5",
       "goalId": "3",
       "userId": "jeffbezos",
       "text": "How about a trip to the stratosphere with me Mark?",
-      "createdAt": "Oct 10, 2022"
+      "createdAt": "2022-10-11T01:02:53.084Z"
     },
     {
       "id": "6",
       "goalId": "4",
       "userId": "markzukerburg",
       "text": "Elon, I like your goal here. What do you think about Virtual Reality? Transport is not needed in that space",
-      "createdAt": "Oct 10, 2022"
+      "createdAt": "2022-10-11T01:02:53.084Z"
     },
     {
       "id": "7",
       "goalId": "5",
       "userId": "elonmusk",
       "text": "What kind of rockets are you using? Have you tried SpaceX's Falcon Heavy?",
-      "createdAt": "Oct 10, 2022"
+      "createdAt": "2022-10-11T01:02:53.084Z"
+    },
+    {
+      "text": "I'm curious which gear are you using on the marathon day?",
+      "goalId": "1",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T03:05:42.186Z",
+      "id": "o_c9LHD"
+    },
+    {
+      "text": "what's the progress on this project?",
+      "goalId": "2",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T03:07:07.174Z",
+      "id": "8W5rkMY"
+    },
+    {
+      "text": "sadasdas",
+      "goalId": "2",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T03:11:28.577Z",
+      "id": "0RDpG1H"
+    },
+    {
+      "text": "asda",
+      "goalId": "1",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T03:11:51.162Z",
+      "id": "UzBWZ1t"
+    },
+    {
+      "text": "testing",
+      "goalId": "1",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T03:14:23.457Z",
+      "id": "LAkuYbx"
+    },
+    {
+      "text": "한국어",
+      "goalId": "4",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T03:30:53.764Z",
+      "id": "f28mDy6"
+    },
+    {
+      "text": "snowball effect ⛄️",
+      "goalId": "1",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T03:31:13.591Z",
+      "id": "gccqawA"
+    },
+    {
+      "text": "curious what your current food expenditure is?",
+      "goalId": "6",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T03:40:16.169Z",
+      "id": "Ybl_Vd7"
+    },
+    {
+      "text": "what?",
+      "goalId": "2",
+      "userId": "stevejobs",
+      "createdAt": "2022-10-16T03:43:45.715Z",
+      "id": "psoDJed"
+    },
+    {
+      "text": "yay!!!",
+      "goalId": "5",
+      "userId": "jeffbezos",
+      "createdAt": "2022-10-16T03:53:06.135Z",
+      "id": "l5GgnpY"
     }
   ]
 }
