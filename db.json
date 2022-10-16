@@ -5,48 +5,42 @@
       "completed": false,
       "when": "11/19/2022",
       "userId": "samuelwjlee",
-      "what": "finish Huntington Beach half-marathon (13.1 miles) in under two hours!",
-      "commentCount": 3
+      "what": "finish Huntington Beach half-marathon (13.1 miles) in under two hours!"
     },
     {
       "id": "2",
       "completed": false,
       "when": "12/01/2025",
       "userId": "stevejobs",
-      "what": "power all Apple facilities entirely by renewable energy",
-      "commentCount": 1
+      "what": "power all Apple facilities entirely by renewable energy"
     },
     {
       "id": "3",
       "completed": false,
       "when": "01/01/2030",
       "userId": "markzukerburg",
-      "what": "visit all 50 states and meet people in each one",
-      "commentCount": 1
+      "what": "visit all 50 states and meet people in each one"
     },
     {
       "id": "4",
       "completed": false,
       "when": "03/13/2030",
       "userId": "elonmusk",
-      "what": "accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible",
-      "commentCount": 1
+      "what": "accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible"
     },
     {
       "id": "5",
       "completed": true,
       "when": "07/04/2023",
       "userId": "jeffbezos",
-      "what": "conquer the world by taking control of the internet and the stratosphere while I'm at it",
-      "commentCount": 1
+      "what": "conquer the world by taking control of the internet and the stratosphere while I'm at it"
     },
     {
       "id": "6",
       "completed": false,
       "when": "11/01/2022",
       "userId": "samuelwjlee",
-      "what": "reduce monthly food budget to sub $500",
-      "commentCount": 0
+      "what": "reduce monthly food budget to sub $500"
     }
   ],
   "comments": [
@@ -168,6 +162,83 @@
       "userId": "jeffbezos",
       "createdAt": "2022-10-16T03:53:06.135Z",
       "id": "l5GgnpY"
+    },
+    {
+      "text": "aws for the win!",
+      "goalId": "5",
+      "userId": "jeffbezos",
+      "createdAt": "2022-10-16T04:22:34.237Z",
+      "id": "EPzOvML"
+    },
+    {
+      "text": "asjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwrasjflqeidjwijeofwr",
+      "goalId": "2",
+      "userId": "stevejobs",
+      "createdAt": "2022-10-16T04:28:52.281Z",
+      "id": "McXThY0"
+    },
+    {
+      "text": "will this break the UI?",
+      "goalId": "2",
+      "userId": "stevejobs",
+      "createdAt": "2022-10-16T04:30:12.948Z",
+      "id": "pzU3Gbi"
+    },
+    {
+      "text": "asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdsdasdasdasdasdsdasdasdasdasdsdasdasdasdasdsdasdasdasdasdsdasdasdasdasdsdasdas",
+      "goalId": "6",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T04:49:28.590Z",
+      "id": "H_YEGKk"
+    },
+    {
+      "text": "let me know how that goeslet me know how that goesls",
+      "goalId": "6",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T04:51:36.496Z",
+      "id": "t7U9ZyN"
+    },
+    {
+      "text": "food budget yay!",
+      "goalId": "6",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T04:52:02.799Z",
+      "id": "8y4YEer"
+    },
+    {
+      "text": "yoooo",
+      "goalId": "1",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T05:06:46.819Z",
+      "id": "kHqM4Dq"
+    },
+    {
+      "text": "this is a new comment",
+      "goalId": "1",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T05:08:28.241Z",
+      "id": "jgZl95Q"
+    },
+    {
+      "text": "this is a test comment",
+      "goalId": "2",
+      "userId": "stevejobs",
+      "createdAt": "2022-10-16T05:11:07.691Z",
+      "id": "XnTmV9I"
+    },
+    {
+      "text": "asdasd",
+      "goalId": "4",
+      "userId": "elonmusk",
+      "createdAt": "2022-10-16T05:16:28.880Z",
+      "id": "LrkbfWO"
+    },
+    {
+      "text": "wait...how many states are there in total?",
+      "goalId": "3",
+      "userId": "markzukerburg",
+      "createdAt": "2022-10-16T05:16:49.446Z",
+      "id": "ax66dl4"
     }
   ]
 }

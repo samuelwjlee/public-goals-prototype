@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { postUserComment, useFetchComments, useFetchGoal } from '../api-client'
 import GoalDescription from './GoalDescription'
-import UserBubble from './UserBubble'
+import UserLink from './UserLink'
 import Loader from './Loader'
 import BackLink from './BackLink'
 import { useState } from 'react'
@@ -42,6 +42,7 @@ export default function GoalPage() {
             isInputFocused ? 'comment-input' : 'comment-input-placeholder'
           }
           contentEditable
+          suppressContentEditableWarning
         >
           {!isInputFocused && 'Add a comment'}
         </div>
@@ -69,7 +70,7 @@ export default function GoalPage() {
             {comments.data?.map((comment) => (
               <div className="goal-page-comment" key={comment.id}>
                 <div className="comment-header">
-                  <UserBubble userId={comment.userId} />
+                  <UserLink userId={comment.userId} />
                   <p>on {comment.createdAt}</p>
                 </div>
                 <p>{comment.text}</p>

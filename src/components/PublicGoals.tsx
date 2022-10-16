@@ -10,14 +10,6 @@ export default function PublicGoals() {
         {publicGoals?.data?.map((goal) => (
           <div className="goal-card" key={goal.id}>
             <GoalDescription goalData={goal} />
-            <div className="goal-card-footer">
-              {!!goal?.commentCount && (
-                <p>
-                  {goal?.commentCount} comment
-                  {goal?.commentCount > 1 ? 's' : ''}
-                </p>
-              )}
-            </div>
           </div>
         ))}
       </div>

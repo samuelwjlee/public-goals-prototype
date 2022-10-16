@@ -1,3 +1,7 @@
+:root {
+  --pageMaxWidth: 650px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,18 +21,9 @@ button {
 }
 
 .goal-card {
-  padding: 30px;
-  margin: 25px;
-  max-width: 450px;
+  margin: 20px;
+  max-width: 350px;
   box-sizing: border-box;
-  border: 3px solid black;
-  border-radius: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.goal-card:hover {
-  box-shadow: 3px 3px gray;
 }
 .goal-description {
   font-weight: 500;
@@ -46,19 +41,12 @@ button {
   text-decoration-skip-ink: none;
 }
 
-.goal-card-footer {
-  font-size: 12px;
-  margin: 20px 0 0 0;
-}
-.goal-card-footer > p {
-  margin: 0;
-}
-.user-bubble-link {
+.user-link {
   color: black;
   width: fit-content;
   text-decoration: none;
 }
-.user-bubble-link:hover {
+.user-link:hover {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-decoration-skip-ink: none;
@@ -67,7 +55,7 @@ button {
 .goal-page {
   padding: 30px;
   margin: 0 auto;
-  max-width: 500px;
+  max-width: var(--pageMaxWidth);
   box-sizing: border-box;
 }
 
@@ -85,6 +73,7 @@ button {
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
+  word-break: break-word;
 }
 .comment-header {
   display: flex;
@@ -100,35 +89,35 @@ button {
 
 .comment-form {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 50px 0 20x 0;
 }
 .comment-input {
-  width: 100%;
+  width: calc(100% - 80px);
+  padding: 2px 0;
   font-size: 14px;
   height: auto;
   border: none;
   outline: none;
 }
 .comment-input-placeholder {
-  color: gray;
-  width: 100%;
+  width: calc(100% - 80px);
+  padding: 2px 0;
   font-size: 14px;
+  color: gray;
 }
 .comment-button {
+  width: 80px;
+  box-sizing: border-box;
   border: none;
   background: none;
   font-weight: bold;
-  margin-top: 20px;
-  margin-left: auto;
-  padding: 10px;
+  margin: auto 0 0 auto;
 }
 
-.user-goal-content {
+.user-goal-page {
   padding: 0 20px;
   margin: 30px auto;
-  max-width: 500px;
+  max-width: var(--pageMaxWidth);
 }
 .user-goal {
   margin-top: 20px;

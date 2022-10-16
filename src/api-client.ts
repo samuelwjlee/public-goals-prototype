@@ -12,10 +12,8 @@ export type GoalData = {
   userId: string
   what: string
   when: string
-  commentCount: number
   createdAt: string
 }
-
 type CommentData = {
   id: string
   goalId: string
@@ -28,13 +26,13 @@ function useFetch(url: string) {
   const isAPICalled = useRef(false)
   const [data, setData] = useState<any>(null)
   const [isLoading, setIsLoading] = useState(false)
-  const [isError, setIsError] = useState(false)
+  const [error, setError] = useState('')
 
   async function fetchData() {
     await fetch(url)
       .then((res) => res.json())
       .then(setData)
-      .catch(() => setIsError(true))
+      .catch(setError)
       .finally(() => setIsLoading(false))
   }
 
@@ -46,46 +44,48 @@ function useFetch(url: string) {
     }
   }, [url])
 
-  return { data, isLoading, isError, fetchData }
+  return { data, isLoading, error, fetchData }
+}
+
+function getCommonAPIResponseObject(responseObj: ReturnType<typeof useFetch>) {
+  return {
+    error: responseObj.error,
+    isLoading: responseObj.isLoading,
+    refetch: responseObj.fetchData,
+  }
 }
 
 export function useFetchPublicGoals() {
   const publicGoals = useFetch(FETCH_GOALS_URL)
   return {
-    data: publicGoals.isLoading ? [] : (publicGoals.data as GoalData[]),
-    isLoading: publicGoals.isLoading,
-    isError: publicGoals.isLoading,
-    refetch: publicGoals.fetchData,
+    data: (publicGoals.data ?? []) as GoalData[],
+    ...getCommonAPIResponseObject(publicGoals),
   }
 }
 
 export function useFetchGoal(goalId: string) {
   const goal = useFetch(`${FETCH_GOALS_URL}/${goalId}`)
   return {
-    data: goal.isLoading ? null : (goal.data as GoalData),
-    isLoading: goal.isLoading,
-    isError: goal.isLoading,
-    refetch: goal.fetchData,
+    data: (goal.data ?? null) as GoalData | null,
+    ...getCommonAPIResponseObject(goal),
   }
 }
 
 export function useFetchComments(goalId: string) {
-  const comments = useFetch(`${FETCH_COMMENTS_URL}?goalId=${goalId}`)
+  const comments = useFetch(
+    `${FETCH_COMMENTS_URL}?goalId=${goalId}&_sort=createdAt&_order=desc`
+  )
   return {
-    data: comments.isLoading ? [] : (comments.data as CommentData[]),
-    isLoading: comments.isLoading,
-    isError: comments.isLoading,
-    refetch: comments.fetchData,
+    data: (comments.data ?? []) as CommentData[],
+    ...getCommonAPIResponseObject(comments),
   }
 }
 
 export function useFetchUserGoals(userId: string) {
   const userGoals = useFetch(`${FETCH_GOALS_URL}?userId=${userId}`)
   return {
-    data: userGoals.isLoading ? [] : (userGoals.data as GoalData[]),
-    isLoading: userGoals.isLoading,
-    isError: userGoals.isLoading,
-    refetch: userGoals.fetchData,
+    data: (userGoals.data ?? []) as GoalData[],
+    ...getCommonAPIResponseObject(userGoals),
   }
 }
 

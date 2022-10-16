@@ -1,13 +1,15 @@
+import { Link } from 'react-router-dom'
 import { GoalData } from '../api-client'
-import UserBubble from './UserBubble'
+import UserLink from './UserLink'
 
 export default function GoalDescription({ goalData }: { goalData: GoalData }) {
   return (
     <div className="goal-description">
-      <UserBubble userId={goalData.userId} /> 's goal is to{' '}
-      <a className="emphasized-goal-attr" href={`/${goalData?.id}`}>
+      <UserLink userId={goalData.userId} />
+      's goal is to{' '}
+      <Link className="emphasized-goal-attr" to={`/${goalData?.id}`}>
         {goalData?.what}
-      </a>{' '}
+      </Link>{' '}
       no later than {goalData?.when}.
     </div>
   )
