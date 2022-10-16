@@ -5,9 +5,9 @@ import Loader from './Loader'
 export default function PublicGoals() {
   const publicGoals = useFetchPublicGoals()
   return (
-    <Loader isLoading={publicGoals?.isLoading}>
+    <Loader isLoading={publicGoals.isLoading}>
       <div className="public-goals">
-        {publicGoals?.data?.map((goal) => (
+        {publicGoals.data.map((goal) => (
           <div className="goal-card" key={goal.id}>
             <GoalDescription goalData={goal} />
           </div>

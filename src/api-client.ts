@@ -10,8 +10,8 @@ export type GoalData = {
   id: 1
   completed: boolean
   userId: string
-  what: string
-  when: string
+  content: string
+  dueDate: string
   createdAt: string
 }
 type CommentData = {

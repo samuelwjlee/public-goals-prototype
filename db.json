@@ -3,44 +3,44 @@
     {
       "id": "1",
       "completed": false,
-      "when": "11/19/2022",
+      "dueDate": "11/19/2022",
       "userId": "samuelwjlee",
-      "what": "finish Huntington Beach half-marathon (13.1 miles) in under two hours!"
+      "content": "finish Huntington Beach half-marathon (13.1 miles) in under two hours!"
     },
     {
       "id": "2",
       "completed": false,
-      "when": "12/01/2025",
+      "dueDate": "12/01/2025",
       "userId": "stevejobs",
-      "what": "power all Apple facilities entirely by renewable energy"
+      "content": "power all Apple facilities entirely by renewable energy"
     },
     {
       "id": "3",
       "completed": false,
-      "when": "01/01/2030",
+      "dueDate": "01/01/2030",
       "userId": "markzukerburg",
-      "what": "visit all 50 states and meet people in each one"
+      "content": "visit all 50 states and meet people in each one"
     },
     {
       "id": "4",
       "completed": false,
-      "when": "03/13/2030",
+      "dueDate": "03/13/2030",
       "userId": "elonmusk",
-      "what": "accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible"
+      "content": "accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible"
     },
     {
       "id": "5",
       "completed": true,
-      "when": "07/04/2023",
+      "dueDate": "07/04/2023",
       "userId": "jeffbezos",
-      "what": "conquer the world by taking control of the internet and the stratosphere while I'm at it"
+      "content": "conquer the world by taking control of the internet and the stratosphere while I'm at it"
     },
     {
       "id": "6",
       "completed": false,
-      "when": "11/01/2022",
+      "dueDate": "11/01/2022",
       "userId": "samuelwjlee",
-      "what": "reduce monthly food budget to sub $500"
+      "content": "reduce monthly food budget to sub $500"
     }
   ],
   "comments": [

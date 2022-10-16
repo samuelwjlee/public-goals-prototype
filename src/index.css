@@ -130,6 +130,7 @@ button {
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
+  width: fit-content;
 }
 .back-link:hover {
   text-decoration: underline;

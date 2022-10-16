@@ -7,10 +7,10 @@ export default function GoalDescription({ goalData }: { goalData: GoalData }) {
     <div className="goal-description">
       <UserLink userId={goalData.userId} />
       's goal is to{' '}
-      <Link className="emphasized-goal-attr" to={`/${goalData?.id}`}>
-        {goalData?.what}
+      <Link className="emphasized-goal-attr" to={`/${goalData.id}`}>
+        {goalData.content}
       </Link>{' '}
-      no later than {goalData?.when}.
+      on or before {goalData.dueDate}.
     </div>
   )
 }
