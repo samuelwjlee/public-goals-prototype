@@ -1,7 +1,16 @@
-export default function UserBubble({ userId }: { userId: string }) {
+import { Link } from 'react-router-dom'
+
+export default function UserBubble({
+  userId,
+  withAvatar,
+}: {
+  userId: string
+  withAvatar?: boolean
+}) {
   return (
-    <a className="user-bubble-button" href={`/user/${userId}`}>
-      👨🏻‍💻 {userId}
-    </a>
+    <Link className="user-bubble-link" to={`/user/${userId}`}>
+      {withAvatar && '👨🏻‍💻 '}
+      {userId}
+    </Link>
   )
 }

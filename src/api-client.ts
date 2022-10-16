@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react'
 const SERVER_PORT = 3001
 const LOCAL_HOST = 'http://localhost:'
 const JSON_SERVER_URL = `${LOCAL_HOST}${SERVER_PORT}`
-
 export const FETCH_GOALS_URL = `${JSON_SERVER_URL}/goals`
 export const FETCH_COMMENTS_URL = `${JSON_SERVER_URL}/comments`
 
@@ -14,23 +13,25 @@ export type GoalData = {
   what: string
   when: string
   commentCount: number
+  createdAt: string
 }
 
 type CommentData = {
-  id: number
-  goalId: number
+  id: string
+  goalId: string
   userId: string
   text: string
+  createdAt: string
 }
 
 function useFetch(url: string) {
-  const isDataFetched = useRef(false)
+  const isAPICalled = useRef(false)
   const [data, setData] = useState<any>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
 
   useEffect(() => {
-    if (!isDataFetched.current) {
+    if (!isAPICalled.current) {
       ;(async function () {
         await fetch(url)
           .then((res) => res.json())
@@ -38,7 +39,7 @@ function useFetch(url: string) {
           .catch(() => setIsError(true))
           .finally(() => setIsLoading(false))
       })()
-      isDataFetched.current = true
+      isAPICalled.current = true
     }
   }, [url])
 
@@ -48,7 +49,7 @@ function useFetch(url: string) {
 export function useFetchPublicGoals() {
   const [data, isLoading, isError] = useFetch(FETCH_GOALS_URL)
   return {
-    data: isLoading ? null : (data as GoalData[]),
+    data: isLoading ? [] : (data as GoalData[]),
     isLoading,
     isError,
   }
@@ -79,8 +80,25 @@ export function useFetchUserGoals(userId: string) {
     `${FETCH_GOALS_URL}?userId=${userId}`
   )
   return {
-    data: isLoading ? null : (data as GoalData[]),
+    data: isLoading ? [] : (data as GoalData[]),
     isLoading,
     isError,
   }
+}
+
+export function postUserComment(
+  userComment: string,
+  goalId: string,
+  userId: string
+) {
+  return fetch(FETCH_COMMENTS_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      text: userComment,
+      createdAt: new Date(),
+      goalId,
+      userId,
+    }),
+  })
 }

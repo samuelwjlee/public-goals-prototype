@@ -1,7 +1,7 @@
 {
   "goals": [
     {
-      "id": 1,
+      "id": "1",
       "completed": false,
       "when": "11/19/2022",
       "userId": "samuelwjlee",
@@ -9,7 +9,7 @@
       "commentCount": 3
     },
     {
-      "id": 2,
+      "id": "2",
       "completed": false,
       "when": "12/01/2025",
       "userId": "stevejobs",
@@ -17,7 +17,7 @@
       "commentCount": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "completed": false,
       "when": "01/01/2030",
       "userId": "markzukerburg",
@@ -25,7 +25,7 @@
       "commentCount": 1
     },
     {
-      "id": 4,
+      "id": "4",
       "completed": false,
       "when": "03/13/2030",
       "userId": "elonmusk",
@@ -33,7 +33,7 @@
       "commentCount": 1
     },
     {
-      "id": 5,
+      "id": "5",
       "completed": true,
       "when": "07/04/2023",
       "userId": "jeffbezos",
@@ -41,7 +41,7 @@
       "commentCount": 1
     },
     {
-      "id": 6,
+      "id": "6",
       "completed": false,
       "when": "11/01/2022",
       "userId": "samuelwjlee",
@@ -51,46 +51,53 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "goalId": 1,
+      "id": "1",
+      "goalId": "1",
       "userId": "stevejobs",
-      "text": "That's a great goal. Make sure you are hydrated throughout the run. I'm cheering you on!"
+      "text": "That's a great goal. Make sure you are hydrated throughout the run. I'm cheering you on!",
+      "createdAt": "Oct 10, 2022"
     },
     {
-      "id": 2,
-      "goalId": 1,
+      "id": "2",
+      "goalId": "1",
       "userId": "elonmusk",
-      "text": "What kind of training routine are you on?"
+      "text": "What kind of training routine are you on?",
+      "createdAt": "Oct 10, 2022"
     },
     {
-      "id": 3,
-      "goalId": 1,
+      "id": "3",
+      "goalId": "1",
       "userId": "jeffbezos",
-      "text": "Would you like to run with me?"
+      "text": "Would you like to run with me?",
+      "createdAt": "Oct 10, 2022"
     },
     {
-      "id": 4,
-      "goalId": 2,
+      "id": "4",
+      "goalId": "2",
       "userId": "elonmusk",
-      "text": "We could always ditch this planet and become a multi-planetary species"
+      "text": "We could always ditch this planet and become a multi-planetary species",
+      "createdAt": "Oct 10, 2022"
     },
     {
-      "id": 5,
-      "goalId": 3,
+      "id": "5",
+      "goalId": "3",
       "userId": "jeffbezos",
-      "text": "How about a trip to the stratosphere with me Mark?"
+      "text": "How about a trip to the stratosphere with me Mark?",
+      "createdAt": "Oct 10, 2022"
     },
     {
-      "id": 6,
-      "goalId": 4,
+      "id": "6",
+      "goalId": "4",
       "userId": "markzukerburg",
-      "text": "Elon, I like your goal here. What do you think about Virtual Reality? Transport is not needed in that space"
+      "text": "Elon, I like your goal here. What do you think about Virtual Reality? Transport is not needed in that space",
+      "createdAt": "Oct 10, 2022"
     },
     {
-      "id": 7,
-      "goalId": 5,
+      "id": "7",
+      "goalId": "5",
       "userId": "elonmusk",
-      "text": "What kind of rockets are you using? Have you tried SpaceX's Falcon Heavy?"
+      "text": "What kind of rockets are you using? Have you tried SpaceX's Falcon Heavy?",
+      "createdAt": "Oct 10, 2022"
     }
   ]
 }
