@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { postUserComment, useFetchComments, useFetchGoal } from '../api-client'
+import {
+  postUserComment,
+  useFetchComments,
+  useFetchGoal,
+  useFetchSurvey,
+} from '../api-client'
 import GoalDescription from './GoalDescription'
 import UserLink from './UserLink'
 import Loader from './Loader'
@@ -9,6 +14,7 @@ import BackLink from './BackLink'
 export default function GoalPage() {
   const goalId = useParams().goalId ?? ''
   const goal = useFetchGoal(goalId)
+  const survey = useFetchSurvey(goalId)
   const comments = useFetchComments(goalId)
   const [userComment, setUserComment] = useState('')
   const [isInputFocused, setIsInputFocused] = useState(false)
@@ -22,6 +28,22 @@ export default function GoalPage() {
             <GoalDescription goalData={goal.data} />
           </div>
         )}
+      </Loader>
+      <Loader isLoading={survey.isLoading}>
+        {survey.data.map((surveyData, idx) => (
+          <div className="survey-section" key={surveyData.id}>
+            <div className="survey-header">
+              Survey #{idx + 1}{' '}
+              <span>
+                posted on {surveyData.createdAt}{' '}
+                {new Date(surveyData.expiration) <= new Date()
+                  ? '✅ Survey completed!'
+                  : '⏳ Survey in progress'}
+              </span>
+            </div>
+            <p>{surveyData.question}</p>
+          </div>
+        ))}
       </Loader>
       <div className="comment-form">
         <div
@@ -52,12 +74,14 @@ export default function GoalPage() {
             onClick={() => {
               setUserComment('')
               setIsInputFocused(false)
-              postUserComment(
-                userComment,
-                goalId,
-                goal.data?.userId ?? '',
-                comments.refetch
-              )
+              if (goal.data?.userId) {
+                postUserComment(
+                  userComment,
+                  goalId,
+                  goal.data?.userId,
+                  comments.refetch
+                )
+              }
             }}
           >
             Comment
@@ -65,7 +89,7 @@ export default function GoalPage() {
         )}
       </div>
       <Loader isLoading={comments.isLoading}>
-        <div className="goal-page-comments-section">
+        <div className="goal-page-sub-section">
           {comments.data.map((comment) => (
             <div className="goal-page-comment" key={comment.id}>
               <div className="comment-header">

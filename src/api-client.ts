@@ -1,16 +1,18 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 
 const SERVER_PORT = 3001
 const LOCAL_HOST = 'http://localhost:'
 const JSON_SERVER_URL = `${LOCAL_HOST}${SERVER_PORT}`
-export const FETCH_GOALS_URL = `${JSON_SERVER_URL}/goals`
-export const FETCH_COMMENTS_URL = `${JSON_SERVER_URL}/comments`
+const FETCH_GOALS_URL = `${JSON_SERVER_URL}/goals`
+const FETCH_COMMENTS_URL = `${JSON_SERVER_URL}/comments`
+const FETCH_SURVEY_URL = `${JSON_SERVER_URL}/survey`
 
 export type GoalData = {
-  id: 1
+  id: string
   completed: boolean
   userId: string
-  content: string
+  objective: string
+  strategy: string
   dueDate: string
   createdAt: string
 }
@@ -21,6 +23,20 @@ type CommentData = {
   text: string
   createdAt: string
 }
+type SurveyData = {
+  id: string
+  goalId: string
+  question: string
+  createdAt: string
+  feedback: number
+  expiration: string
+  no: number
+  somewhat: number
+  yes: number
+  very: number
+  participantNum: number
+}
+// TODO: goal creation
 
 function useFetch(url: string) {
   const isAPICalled = useRef(false)
@@ -28,13 +44,16 @@ function useFetch(url: string) {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
 
-  async function fetchData() {
-    await fetch(url)
-      .then((res) => res.json())
-      .then(setData)
-      .catch(setError)
-      .finally(() => setIsLoading(false))
-  }
+  const fetchData = useCallback(
+    async function () {
+      await fetch(url)
+        .then((res) => res.json())
+        .then(setData)
+        .catch(setError)
+        .finally(() => setIsLoading(false))
+    },
+    [url]
+  )
 
   useEffect(() => {
     if (!isAPICalled.current) {
@@ -42,7 +61,7 @@ function useFetch(url: string) {
       fetchData()
       isAPICalled.current = true
     }
-  }, [url])
+  }, [fetchData])
 
   return { data, isLoading, error, fetchData }
 }
@@ -86,6 +105,14 @@ export function useFetchUserGoals(userId: string) {
   return {
     data: (userGoals.data ?? []) as GoalData[],
     ...getCommonAPIResponseObject(userGoals),
+  }
+}
+
+export function useFetchSurvey(goalId: string) {
+  const survey = useFetch(`${FETCH_SURVEY_URL}?goalId=${goalId}`)
+  return {
+    data: (survey.data ?? []) as SurveyData[],
+    ...getCommonAPIResponseObject(survey),
   }
 }
 

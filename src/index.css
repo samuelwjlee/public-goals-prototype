@@ -68,7 +68,7 @@ button {
   font-size: 14px;
 }
 
-.goal-page-comments-section {
+.goal-page-sub-section {
   margin: 40px 0;
 }
 .goal-page-comment {
@@ -135,4 +135,17 @@ button {
 .back-link:hover {
   text-decoration: underline;
   text-decoration-thickness: 3px;
+}
+
+.survey-section {
+  margin: 10px 0 50px 0;
+}
+.survey-header {
+  font-size: 14px;
+  font-weight: bold;
+}
+.survey-header > span {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
 }

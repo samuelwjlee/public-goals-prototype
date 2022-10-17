@@ -8,9 +8,9 @@ export default function GoalDescription({ goalData }: { goalData: GoalData }) {
       <UserLink userId={goalData.userId} />
       's goal is to{' '}
       <Link className="emphasized-goal-attr" to={`/${goalData.id}`}>
-        {goalData.content}
+        {goalData.objective}
       </Link>{' '}
-      on or before {goalData.dueDate}.
+      on or before {goalData.dueDate} by {goalData.strategy}.
     </div>
   )
 }

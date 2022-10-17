@@ -1,46 +1,74 @@
 {
   "goals": [
     {
+      "id": "0",
+      "completed": false,
+      "dueDate": "11/19/2022",
+      "userId": "samuelwjlee",
+      "objective": "get opportunity to lead a feature development from start to finish",
+      "strategy": "writing at least one design documentation for one feature"
+    },
+    {
       "id": "1",
       "completed": false,
       "dueDate": "11/19/2022",
       "userId": "samuelwjlee",
-      "content": "finish Huntington Beach half-marathon (13.1 miles) in under two hours!"
+      "objective": "finish Huntington Beach half-marathon (13.1 miles) in under two hours!",
+      "strategy": "increasing average minutes per mile by 5% each week"
     },
     {
       "id": "2",
       "completed": false,
       "dueDate": "12/01/2025",
       "userId": "stevejobs",
-      "content": "power all Apple facilities entirely by renewable energy"
+      "objective": "power all Apple facilities entirely by renewable energy",
+      "strategy": "building a sustainable Apple campus run entirely by solar power"
     },
     {
       "id": "3",
       "completed": false,
       "dueDate": "01/01/2030",
       "userId": "markzukerburg",
-      "content": "visit all 50 states and meet people in each one"
+      "objective": "visit all 50 states and meet people in each one",
+      "strategy": "booking at least four travel itinerary each month"
     },
     {
       "id": "4",
       "completed": false,
       "dueDate": "03/13/2030",
       "userId": "elonmusk",
-      "content": "accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market as soon as possible"
+      "objective": "accelerate the advent of sustainable transport by bringing compelling mass market electric cars to market",
+      "strategy": "selling the model S and using that money to make the model 3"
     },
     {
       "id": "5",
       "completed": true,
       "dueDate": "07/04/2023",
       "userId": "jeffbezos",
-      "content": "conquer the world by taking control of the internet and the stratosphere while I'm at it"
+      "objective": "conquer the world by taking control of the internet and the stratosphere",
+      "strategy": "cutting launching cost by 50% with affordable rockets"
     },
     {
       "id": "6",
       "completed": false,
       "dueDate": "11/01/2022",
       "userId": "samuelwjlee",
-      "content": "reduce monthly food budget to sub $500"
+      "objective": "reduce monthly food budget to sub $500",
+      "strategy": "reducing eating out by 10% each week"
+    }
+  ],
+  "survey": [
+    {
+      "id": "0",
+      "goalId": "0",
+      "question": "Has any of my recent documentation been helpful in completing a team's feature development?",
+      "no": 1,
+      "somewhat": 4,
+      "yes": 2,
+      "very": 1,
+      "participantNum": 8,
+      "createdAt": "2022-10-10T01:02:53.084Z",
+      "expiration": "2022-10-01T01:02:53.084Z"
     }
   ],
   "comments": [
@@ -239,6 +267,61 @@
       "userId": "markzukerburg",
       "createdAt": "2022-10-16T05:16:49.446Z",
       "id": "ax66dl4"
+    },
+    {
+      "text": "Hey Elon, that's a great idea. I have three questions:1. would it be better to have a more specific date than as soon as possible?2. what is considered compelling?3. how much acceleration are we talking about?thanks!Sam",
+      "goalId": "4",
+      "userId": "elonmusk",
+      "createdAt": "2022-10-16T19:36:52.133Z",
+      "id": "bhVLie0"
+    },
+    {
+      "text": "yothisisatest",
+      "goalId": "4",
+      "userId": "elonmusk",
+      "createdAt": "2022-10-16T19:38:12.254Z",
+      "id": "Yzv_5CE"
+    },
+    {
+      "text": "asdasdasd",
+      "goalId": "1",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T19:50:59.316Z",
+      "id": "-QJQ_wR"
+    },
+    {
+      "text": "how are you going to achieve your goal?",
+      "goalId": "1",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T20:08:01.159Z",
+      "id": "hSHzdIe"
+    },
+    {
+      "text": "That's a great idea! what kind of tool are you thinking about using to create a design doc?",
+      "goalId": "0",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-16T21:51:30.457Z",
+      "id": "6k2Htng"
+    },
+    {
+      "text": "this is another comment",
+      "goalId": "5",
+      "createdAt": "2022-10-17T04:16:01.810Z",
+      "id": "l6MBEdm"
+    },
+    {
+      "text": "asdasdasd",
+      "goalId": "0",
+      "userId": "samuelwjlee",
+      "createdAt": "2022-10-17T04:25:03.886Z",
+      "id": "FWfFokh"
+    },
+    {
+      "text": "hey hey",
+      "goalId": "2",
+      "userId": "stevejobs",
+      "createdAt": "2022-10-17T04:25:09.932Z",
+      "id": "67eyzpW"
     }
   ]
 }
